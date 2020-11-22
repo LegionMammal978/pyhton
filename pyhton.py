@@ -178,9 +178,9 @@ def WRT():
 			if (get_ip_len(wp) > ip_len):
 				return # This would expand the program too much.
 			else:
-				program.append(i)
+				program.append(Septit(i.value))
 		else:
-			program[wp] = i
+			program[wp] = Septit(i.value)
 		wp += 1
 		
 	ip += 1 # I need to find the program length for starters.
@@ -216,7 +216,7 @@ def END():
 	exit()
 
 def RNR():
-	global ip, program, r, op_code,
+	global ip, program, r, op_code
 	dbg_print(" " + str(program[ip + 1].value))
 	ip += 1
 	if (debug):
